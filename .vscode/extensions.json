@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "tauri-apps.tauri-vscode",
+    "bradlc.vscode-tailwindcss",
+    "EditorConfig.EditorConfig",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

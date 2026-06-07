@@ -1,0 +1,29 @@
+{
+  "name": "@dbz-code/events",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Event bus and typed event system for DBZ Code",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "dev": "tsc --project tsconfig.build.json --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "rimraf": "*",
+    "typescript": "*",
+    "vitest": "*"
+  }
+}

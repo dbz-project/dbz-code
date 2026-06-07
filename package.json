@@ -1,0 +1,46 @@
+{
+  "name": "dbz-code",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A fully open-source AI coding agent runtime",
+  "license": "MIT",
+  "homepage": "https://github.com/dbz-code/dbz-code",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbz-code/dbz-code.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dbz-code/dbz-code/issues"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r clean && rimraf node_modules",
+    "test": "pnpm -r test",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.3.0",
+    "rimraf": "^6.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}

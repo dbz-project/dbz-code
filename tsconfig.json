@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.base.json",
+  "references": [
+    { "path": "./packages/shared" },
+    { "path": "./packages/events" },
+    { "path": "./packages/core" },
+    { "path": "./packages/providers" },
+    { "path": "./packages/tools" },
+    { "path": "./packages/memory" },
+    { "path": "./packages/context" },
+    { "path": "./packages/skills" },
+    { "path": "./packages/agents" },
+    { "path": "./packages/permissions" },
+    { "path": "./packages/sessions" },
+    { "path": "./packages/mcp" },
+    { "path": "./apps/cli" },
+    { "path": "./apps/studio" }
+  ],
+  "files": []
+}

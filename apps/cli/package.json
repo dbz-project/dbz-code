@@ -1,0 +1,29 @@
+{
+  "name": "@dbz-code/cli",
+  "version": "0.0.0",
+  "private": true,
+  "description": "DBZ Code command-line interface",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "dbz": "./dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "dev": "tsc --project tsconfig.build.json --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "start": "node dist/main.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@dbz-code/core": "workspace:*",
+    "@dbz-code/events": "workspace:*",
+    "@dbz-code/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "rimraf": "*",
+    "typescript": "*",
+    "vitest": "*"
+  }
+}

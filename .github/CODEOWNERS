@@ -1,0 +1,18 @@
+# CODEOWNERS
+# These owners are automatically requested for review on PRs that touch these paths.
+# Syntax: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global fallback — maintainer owns everything by default
+* @dbz-code/maintainers
+
+# Core runtime
+/packages/core/ @dbz-code/maintainers
+/packages/events/ @dbz-code/maintainers
+
+# Infrastructure
+/.github/ @dbz-code/maintainers
+/docs/ @dbz-code/maintainers
+
+# Apps
+/apps/cli/ @dbz-code/maintainers
+/apps/studio/ @dbz-code/maintainers
