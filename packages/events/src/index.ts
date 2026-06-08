@@ -60,6 +60,9 @@ export type {
   McpToolCalledEvent,
   RuntimeStartedEvent,
   RuntimeStoppedEvent,
+  RuntimeFailedEvent,
+  RuntimeMessageReceivedEvent,
+  RuntimeResponseGeneratedEvent,
   EventHandlerFailedEvent,
 } from "./types.js";
 

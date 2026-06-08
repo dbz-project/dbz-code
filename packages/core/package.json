@@ -1,8 +1,8 @@
 {
   "name": "@dbz-code/core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": false,
-  "description": "Core runtime orchestration for DBZ Code",
+  "description": "Core Runtime — the orchestration engine of DBZ Code",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -20,6 +20,10 @@
     "typecheck": "tsc --noEmit",
     "clean": "rimraf dist *.tsbuildinfo",
     "test": "vitest run"
+  },
+  "dependencies": {
+    "@dbz-code/events": "workspace:*",
+    "@dbz-code/shared": "workspace:*"
   },
   "devDependencies": {
     "rimraf": "*",

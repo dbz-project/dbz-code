@@ -24,6 +24,9 @@ import type {
   ModelRequestedEvent,
   PermissionDeniedEvent,
   PermissionGrantedEvent,
+  RuntimeFailedEvent,
+  RuntimeMessageReceivedEvent,
+  RuntimeResponseGeneratedEvent,
   RuntimeStartedEvent,
   RuntimeStoppedEvent,
   SessionClosedEvent,
@@ -98,6 +101,9 @@ export type DBZEventMap = {
   // Runtime
   "runtime.started": RuntimeStartedEvent;
   "runtime.stopped": RuntimeStoppedEvent;
+  "runtime.failed": RuntimeFailedEvent;
+  "runtime.message.received": RuntimeMessageReceivedEvent;
+  "runtime.response.generated": RuntimeResponseGeneratedEvent;
 
   // Internal
   "event.handler_failed": EventHandlerFailedEvent;

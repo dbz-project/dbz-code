@@ -204,6 +204,37 @@ export interface RuntimeStoppedEvent extends BaseEvent {
   readonly reason?: string;
 }
 
+/**
+ * Emitted when the Runtime receives a user message, before provider call.
+ * Added by Core Runtime spec (04-core-runtime.md).
+ */
+export interface RuntimeMessageReceivedEvent extends BaseEvent {
+  readonly type: "runtime.message.received";
+  readonly runtimeId: string;
+  readonly sessionId: string;
+}
+
+/**
+ * Emitted when the Runtime has a final response ready to return.
+ * Added by Core Runtime spec (04-core-runtime.md).
+ */
+export interface RuntimeResponseGeneratedEvent extends BaseEvent {
+  readonly type: "runtime.response.generated";
+  readonly runtimeId: string;
+  readonly sessionId: string;
+}
+
+/**
+ * Emitted when the Runtime encounters an unrecoverable failure.
+ * Added by Core Runtime spec (04-core-runtime.md).
+ */
+export interface RuntimeFailedEvent extends BaseEvent {
+  readonly type: "runtime.failed";
+  readonly runtimeId: string;
+  readonly sessionId: string;
+  readonly error: string;
+}
+
 // ─── Event Bus Internal ───────────────────────────────────────────────────────
 
 /**
