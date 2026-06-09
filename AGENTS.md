@@ -57,3 +57,19 @@ pnpm test          # run all tests
 - The `User` role owns GitHub, testing, integration, and project management.
 - The `Claude` role owns implementation, refactoring, tests, and the build system.
 - The `ChatGPT` role owns architecture, specifications, technical reviews, and the roadmap.
+
+---
+
+## Frozen Packages (do not modify without architecture update)
+
+| Package | Frozen at |
+|---------|-----------|
+| `packages/events` | v1 — Event System spec (02-event-system.md) |
+| `packages/shared` | v1 — Shared Contracts spec (03-shared-contracts.md) |
+| `packages/core` | v1 — Core Runtime spec (04-core-runtime.md) |
+
+## Note: RuntimeStatus.WaitingForTools
+
+`RuntimeStatus.WaitingForTools` is defined but **not used in v1**.
+Reserved for future streaming or async tool execution models.
+Do not implement transitions to this state without an architecture update.

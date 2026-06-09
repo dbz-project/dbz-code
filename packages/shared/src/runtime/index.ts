@@ -25,6 +25,14 @@ import type { ToolCall } from "../tools/index.js";
 export enum RuntimeStatus {
   Idle,
   Running,
+  /**
+   * Reserved for future use.
+   *
+   * Intended for streaming or async tool execution models where the Runtime
+   * enters a waiting state between tool dispatch and tool result collection.
+   * Not used in v1 — the Runtime executes tools synchronously within the
+   * Running state.
+   */
   WaitingForTools,
   Stopped,
   Failed,

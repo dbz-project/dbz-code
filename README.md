@@ -6,7 +6,11 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-20%2B-green?logo=node.js)](https://nodejs.org/)
 [![pnpm](https://img.shields.io/badge/pnpm-9%2B-orange?logo=pnpm)](https://pnpm.io/)
-[![CI](https://github.com/dbz-code/dbz-code/actions/workflows/ci.yml/badge.svg)](https://github.com/dbz-code/dbz-code/actions/workflows/ci.yml)
+[![CI](https://github.com/dbz-project/dbz-code/actions/workflows/ci.yml/badge.svg)](https://github.com/dbz-project/dbz-code/actions/workflows/ci.yml)
+
+---
+
+**Founded by [Adam Belafia Es Safi](https://github.com/dbz-project)**
 
 ---
 
@@ -47,7 +51,7 @@ dbz-code/
 │   ├── permissions/  # Permission system
 │   ├── sessions/     # Session management
 │   ├── mcp/          # Model Context Protocol integration
-│   └── shared/       # Shared utilities and types
+│   └── shared/       # Shared contracts and types
 └── docs/
     ├── architecture/ # Architecture decision records
     ├── decisions/    # General decisions log
@@ -55,6 +59,25 @@ dbz-code/
     ├── progress/     # Progress tracking
     └── rfc/          # Request for comments
 ```
+
+---
+
+## Package Status
+
+| Package | Version | Status |
+|---------|---------|--------|
+| `@dbz-code/events` | 0.1.0 | 🔒 Frozen v1 |
+| `@dbz-code/shared` | 0.1.0 | 🔒 Frozen v1 |
+| `@dbz-code/core` | 0.1.0 | 🔒 Frozen v1 |
+| `@dbz-code/providers` | — | ⏳ In design |
+| `@dbz-code/tools` | — | ⏳ Pending |
+| `@dbz-code/memory` | — | ⏳ Pending |
+| `@dbz-code/sessions` | — | ⏳ Pending |
+| `@dbz-code/agents` | — | ⏳ Pending |
+| `@dbz-code/skills` | — | ⏳ Pending |
+| `@dbz-code/permissions` | — | ⏳ Pending |
+| `@dbz-code/mcp` | — | ⏳ Pending |
+| `@dbz-code/context` | — | ⏳ Pending |
 
 ---
 
@@ -68,31 +91,20 @@ dbz-code/
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/dbz-code/dbz-code.git
+git clone https://github.com/dbz-project/dbz-code.git
 cd dbz-code
-
-# Install dependencies
 pnpm install
-
-# Build all packages
 pnpm build
 ```
 
 ### Development
 
 ```bash
-# Run all packages in watch mode
-pnpm dev
-
-# Lint
-pnpm lint
-
-# Type check
-pnpm typecheck
-
-# Format
-pnpm format
+pnpm dev        # watch mode
+pnpm lint       # lint
+pnpm typecheck  # type check
+pnpm test       # run all tests
+pnpm format     # format
 ```
 
 ---
@@ -105,16 +117,34 @@ pnpm format
 - **Desktop**: Tauri (Rust + WebView)
 - **UI**: React
 - **Database**: SQLite + sqlite-vec
-- **Event System**: Custom event bus
+- **Event System**: Custom typed event bus
+
+---
+
+## Architecture
+
+See [`docs/architecture/`](docs/architecture/) for all architecture documents.
+
+| Document | Description |
+|----------|-------------|
+| [02-event-system.md](docs/architecture/02-event-system.md) | Event bus, typed registry, replay |
+| [03-shared-contracts.md](docs/architecture/03-shared-contracts.md) | Shared interfaces and types |
+| [04-core-runtime.md](docs/architecture/04-core-runtime.md) | Core orchestration engine |
 
 ---
 
 ## Contributing
 
-We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a pull request.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a pull request.
 
 ---
 
 ## License
 
 [MIT](LICENSE) — DBZ Code is free and open-source software.
+
+---
+
+## Founder
+
+DBZ Code was founded by **Adam Belafia Es Safi**.
