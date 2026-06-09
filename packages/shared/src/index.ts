@@ -51,7 +51,14 @@ export type {
 
 // ─── Providers ────────────────────────────────────────────────────────────────
 
+export { ProviderType } from "./providers/index.js";
+
 export type {
+  ProviderMetadata,
+  ModelMetadata,
+  ProviderCapabilities,
+  ProviderConfig,
+  ProviderRegistry,
   GenerateRequest,
   GenerateResponse,
   ProviderInterface,

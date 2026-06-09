@@ -24,6 +24,11 @@ import type {
   ModelRequestedEvent,
   PermissionDeniedEvent,
   PermissionGrantedEvent,
+  ProviderConnectedEvent,
+  ProviderDisconnectedEvent,
+  ProviderFailedEvent,
+  ProviderRegisteredEvent,
+  ProviderUnregisteredEvent,
   RuntimeFailedEvent,
   RuntimeMessageReceivedEvent,
   RuntimeResponseGeneratedEvent,
@@ -97,6 +102,13 @@ export type DBZEventMap = {
   "mcp.connected": McpConnectedEvent;
   "mcp.disconnected": McpDisconnectedEvent;
   "mcp.tool_called": McpToolCalledEvent;
+
+  // Provider
+  "provider.registered": ProviderRegisteredEvent;
+  "provider.unregistered": ProviderUnregisteredEvent;
+  "provider.connected": ProviderConnectedEvent;
+  "provider.disconnected": ProviderDisconnectedEvent;
+  "provider.failed": ProviderFailedEvent;
 
   // Runtime
   "runtime.started": RuntimeStartedEvent;

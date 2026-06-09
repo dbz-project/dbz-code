@@ -1,8 +1,8 @@
 {
   "name": "@dbz-code/providers",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": false,
-  "description": "Model provider adapters (Ollama, OpenAI, Anthropic, Gemini, OpenRouter)",
+  "description": "Provider System — model provider adapters for DBZ Code",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -20,6 +20,10 @@
     "typecheck": "tsc --noEmit",
     "clean": "rimraf dist *.tsbuildinfo",
     "test": "vitest run"
+  },
+  "dependencies": {
+    "@dbz-code/events": "workspace:*",
+    "@dbz-code/shared": "workspace:*"
   },
   "devDependencies": {
     "rimraf": "*",

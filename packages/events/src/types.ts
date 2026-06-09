@@ -172,6 +172,36 @@ export interface PermissionDeniedEvent extends BaseEvent {
   readonly reason: string;
 }
 
+// ─── Provider Domain ──────────────────────────────────────────────────────────
+// Added by Provider System spec (05-provider-system.md)
+
+export interface ProviderRegisteredEvent extends BaseEvent {
+  readonly type: "provider.registered";
+  readonly providerId: string;
+}
+
+export interface ProviderUnregisteredEvent extends BaseEvent {
+  readonly type: "provider.unregistered";
+  readonly providerId: string;
+}
+
+export interface ProviderConnectedEvent extends BaseEvent {
+  readonly type: "provider.connected";
+  readonly providerId: string;
+}
+
+export interface ProviderDisconnectedEvent extends BaseEvent {
+  readonly type: "provider.disconnected";
+  readonly providerId: string;
+  readonly reason?: string;
+}
+
+export interface ProviderFailedEvent extends BaseEvent {
+  readonly type: "provider.failed";
+  readonly providerId: string;
+  readonly error: string;
+}
+
 // ─── MCP Domain ───────────────────────────────────────────────────────────────
 
 export interface McpConnectedEvent extends BaseEvent {
